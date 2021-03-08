@@ -1,0 +1,130 @@
+[
+  {
+    "id": 0,
+    "name": "Bar Happy Hour",
+    "picture": "images/bar_sm_450.jpg",
+    "type": "Bar",
+    "price": "1000", 
+    "location": "Monaghan, Ireland"
+  },
+  {
+    "id": 1,
+    "name": "Basket Ball Tickets",
+    "picture": "images/basketballs_sm_425.jpg",
+    "type": "Sport",
+    "price": "1000", 
+    "location": "Monaghan, Ireland"
+  },
+  {
+    "id": 2,
+    "name": "Free Coffee",
+    "picture": "images/coffee_sm_450.jpg",
+    "type": "Cafe",
+    "price": "1000", 
+    "location": "Monaghan, Ireland"
+  },
+  {
+    "id": 3,
+    "name": "Concert Tickets",
+    "picture": "images/concert_sm_450.jpg",
+    "type": "Event",
+    "price": "1000",  
+    "location": "Monaghan, Ireland"
+  },
+  {
+    "id": 4,
+    "name": "Groceries",
+    "picture": "images/grocery_sm_429.jpg",
+    "type": "Shop",
+    "price": "1000", 
+    "location": "Monaghan, Ireland"
+  },
+  {
+    "id": 5,
+    "name": "Hotel Stay",
+    "picture": "images/hotel_sm_428.jpg",
+    "type": "Vacation",
+    "price": "1000", 
+    "location": "Honolulu, Hawaii"
+  },
+  {
+    "id": 6,
+    "name": "Piano Lessons",
+    "picture": "images/piano_sm_450.jpg",
+    "type": "Education",
+    "price": "1000", 
+    "location": "Monaghan, Ireland"
+  },
+  {
+    "id": 7,
+    "name": "Restaurant",
+    "picture": "images/restaurant_sm_428.jpg",
+    "type": "Restaurant",
+    "price": "1000", 
+    "location": "Monaghan, Ireland"
+  },
+  {
+    "id": 8,
+    "name": "Soccer Tickets",
+    "picture": "images/soccer1_sm_449.jpg",
+    "type": "Sport",
+    "price": "1000", 
+    "location": "Monaghan, Ireland"
+  },
+  {
+    "id": 9,
+    "name": "Holiday",
+    "picture": "images/holiday_450.jpg",
+    "type": "Vacation",
+    "price": "2000", 
+    "location": "Honolulu, Hawaii"
+  },
+  {
+    "id": 10,
+    "name": "Furniture",
+    "picture": "images/furniture_sm_450.jpg",
+    "type": "Home",
+    "price": "2000", 
+    "location": "Monanaghan, Ireland"
+  },
+  {
+    "id": 11,
+    "name": "Cruise",
+    "picture": "images/holiday_ship_sm_450.jpg",
+    "type": "Vacation",
+    "price": "2000", 
+    "location": "Monanaghan, Ireland"
+  },
+  {
+    "id": 12,
+    "name": "Laptop",
+    "picture": "images/notebook_sm_426.jpg",
+    "type": "Home",
+    "price": "2000", 
+    "location": "Monanaghan, Ireland"
+  },
+  {
+    "id": 13,
+    "name": "Television",
+    "picture": "images/plasma_sm_450.jpg",
+    "type": "Home",
+    "price": "2000", 
+    "location": "Monanaghan, Ireland"
+  },
+  {
+    "id": 14,
+    "name": "Restaurant",
+    "picture": "images/restaurant_3_sm_450.jpg",
+    "type": "Restaurant",
+    "price": "1000", 
+    "location": "Monanaghan, Ireland"
+  },
+  {
+    "id": 15,
+    "name": "Restaurant",
+    "picture": "images/restaurant_2_sm_416.jpg",
+    "type": "Restaurant",
+    "price": "1000", 
+    "location": "Monaghan, Ireland"
+  }
+]
