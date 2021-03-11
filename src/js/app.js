@@ -105,9 +105,7 @@ App = {
 
     $.getJSON('../goods.json', function(data) {
       
-      for (i = 0; i < data.length; i ++) {
-        //console.log('id = ' + data[i].id);
-        //console.log('price = ' + data[i].price);
+      for (i = 0; i < data.length; i ++) {        
 
         if (goodId == data[i].id){
            goodPrice = parseInt(data[i].price);
@@ -129,6 +127,12 @@ App = {
         var account = accounts[0];
         var toAddress = $('#TUProviderAddress').val();
 
+        if ( toAddress == '' || toAddress == '0x0' ) {
+           
+           alert('Please enter a provider address');
+        }
+        else
+        {
         console.log('handlePurchase : Purchase account = ' + account);
 
         App.contracts.ThankYouToken.deployed().then(function(instance) {
@@ -143,7 +147,7 @@ App = {
              alert('Purchase Failed! : Insufficient Funds');
           };            
           console.log(err.message);
-        });
+        });}
       });
     });    
   },
