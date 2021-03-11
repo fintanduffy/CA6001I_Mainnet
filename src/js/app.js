@@ -59,13 +59,13 @@ App = {
       return App.markPurchased();
     });
 
-    $.getJSON('TutorialToken.json', function(data) {
+    $.getJSON('ThankYouToken.json', function(data) {
       // Get the necessary contract artifact file and instantiate it with truffle-contract.
-      var TutorialTokenArtifact = data;
-      App.contracts.TutorialToken = TruffleContract(TutorialTokenArtifact);
+      var ThankYouTokenArtifact = data;
+      App.contracts.ThankYouToken = TruffleContract(ThankYouTokenArtifact);
 
       // Set the provider for our contract.
-      App.contracts.TutorialToken.setProvider(App.web3Provider);
+      App.contracts.ThankYouToken.setProvider(App.web3Provider);
 
       // Use our contract to retieve and mark the adopted pets.
       return App.getBalances();
@@ -119,7 +119,7 @@ App = {
       console.log('handlePurchase: price = ' + goodPrice);
     
       var purchaseGoodsInstance;
-      var tutorialTokenInstance;
+      var thankYouTokenInstance;
 
       web3.eth.getAccounts(function(error, accounts) {
         if (error) {
@@ -127,14 +127,14 @@ App = {
         }
 
         var account = accounts[0];
-        var toAddress = $('#TTProviderAddress').val();
+        var toAddress = $('#TUProviderAddress').val();
 
         console.log('handlePurchase : Purchase account = ' + account);
 
-        App.contracts.TutorialToken.deployed().then(function(instance) {
-          tutorialTokenInstance = instance;
+        App.contracts.ThankYouToken.deployed().then(function(instance) {
+          thankYouTokenInstance = instance;
 
-          return tutorialTokenInstance.transfer(toAddress, goodPrice, {from: account, gas: 100000});
+          return thankYouTokenInstance.transfer(toAddress, goodPrice, {from: account, gas: 100000});
         }).then(function(result) {
           alert('Purchase Successful!');
           return App.handlePurchaseItem(goodId);          
@@ -151,7 +151,7 @@ App = {
   handlePurchaseItem: function(goodId) {
     
       var purchaseGoodsInstance;
-      var tutorialTokenInstance;
+      // var thankYouTokenInstance;
 
       web3.eth.getAccounts(function(error, accounts) {
         if (error) {
@@ -182,12 +182,12 @@ App = {
    handleDonation: function(event) {
     event.preventDefault();
 
-    var amount = parseInt($('#TTDonateAmount').val());
-    var toAddress = $('#TTDonateAddress').val();
+    var amount = parseInt($('#TUDonateAmount').val());
+    var toAddress = $('#TUDonateAddress').val();
 
-    console.log('Donate ' + amount + ' TT to ' + toAddress);
+    console.log('Donate ' + amount + ' THKU to ' + toAddress);
 
-    var tutorialTokenInstance;
+    var thankYouTokenInstance;
 
     web3.eth.getAccounts(function(error, accounts) {
       if (error) {
@@ -198,10 +198,10 @@ App = {
 
       console.log('Donate ' + account);
 
-      App.contracts.TutorialToken.deployed().then(function(instance) {
-        tutorialTokenInstance = instance;
+      App.contracts.ThankYouToken.deployed().then(function(instance) {
+        thankYouTokenInstance = instance;
 
-        return tutorialTokenInstance.transfer(toAddress, amount, {from: account, gas: 100000});
+        return thankYouTokenInstance.transfer(toAddress, amount, {from: account, gas: 100000});
       }).then(function(result) {
         alert('Donation Successful!');
         return App.getBalances();
@@ -214,7 +214,7 @@ App = {
   getBalances: function() {
     console.log('Getting balances...');
 
-    var tutorialTokenInstance;
+    var thankYouTokenInstance;
 
     web3.eth.getAccounts(function(error, accounts) {
       if (error) {
@@ -227,42 +227,21 @@ App = {
       console.log('accounts[0] = ' + account);
       console.log('accounts[1] = ' + account1);
       
-      App.contracts.TutorialToken.deployed().then(function(instance) {
-        tutorialTokenInstance = instance;
+      App.contracts.ThankYouToken.deployed().then(function(instance) {
+        thankYouTokenInstance = instance;
 
-        return tutorialTokenInstance.balanceOf(account);
+        return thankYouTokenInstance.balanceOf(account);
       }).then(function(result) {
         console.log('balance = ' + 0);
         balance = result.c[0];
         console.log('balance = ' + balance);
-        $('#TTBalance').text(balance);
-        $('#TTAddress').text(account);
+        $('#TUBalance').text(balance);
+        $('#TUAddress').text(account);
       }).catch(function(err) {
         console.log(err.message);
       });
     });
-  },
-
-  openTab: function(evt, tabName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-  } 
+  }
 
 };
 

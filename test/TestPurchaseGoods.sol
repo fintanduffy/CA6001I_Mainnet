@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.6.0;
 
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
@@ -8,7 +8,7 @@ contract TestPurchaseGoods {
   // The address of the PurchaseGoods contract to be tested
   PurchaseGoods purchaseGoods = PurchaseGoods(DeployedAddresses.PurchaseGoods());
 
-  // The id of the pet that will be used for testing
+  // The id of the goods that will be used for testing
   uint expectedGoodsId = 8;
 
   //The expected owner of goods is this contract
