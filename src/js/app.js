@@ -182,33 +182,41 @@ App = {
    handleDonation: function(event) {
     event.preventDefault();
 
-    var amount = parseInt($('#TUDonateAmount').val());
+    var amount = parseInt($('#TUDonateAmount').val()) || 0 ;
     var toAddress = $('#TUDonateAddress').val();
 
     console.log('Donate ' + amount + ' THKU to ' + toAddress);
 
-    var thankYouTokenInstance;
+    if ( amount <= 0 ) {
+       alert('Please enter an amount');
+    }
+    else if ( toAddress == '' || toAddress == '0x0' ) {
+       alert('Please enter an address');
+    }
+    else{ 
+       var thankYouTokenInstance;
 
-    web3.eth.getAccounts(function(error, accounts) {
-      if (error) {
-        console.log(error);
-      }
+       web3.eth.getAccounts(function(error, accounts) {
+         if (error) {
+           console.log(error);
+         }
 
-      var account = accounts[0];
+         var account = accounts[0];
 
-      console.log('Donate ' + account);
+         console.log('Donate ' + account);
 
-      App.contracts.ThankYouToken.deployed().then(function(instance) {
-        thankYouTokenInstance = instance;
+         App.contracts.ThankYouToken.deployed().then(function(instance) {
+           thankYouTokenInstance = instance;
 
-        return thankYouTokenInstance.transfer(toAddress, amount, {from: account, gas: 100000});
-      }).then(function(result) {
-        alert('Donation Successful!');
-        return App.getBalances();
-      }).catch(function(err) {
-        console.log(err.message);
-      });
-    });
+           return thankYouTokenInstance.transfer(toAddress, amount, {from: account, gas: 100000});
+         }).then(function(result) {
+           alert('Donation Successful!');
+           return App.getBalances();
+         }).catch(function(err) {
+           console.log(err.message);
+         });
+       });
+     }
   },
 
   getBalances: function() {
