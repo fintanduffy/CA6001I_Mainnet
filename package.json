@@ -16,6 +16,8 @@
     "lite-server": "^2.6.1"
   },
   "dependencies": {
-    "openzeppelin-solidity": "^3.4.1"
+    "dotenv": "^8.2.0",
+    "openzeppelin-solidity": "^3.4.1",
+    "truffle-hdwallet-provider": "^1.0.17"
   }
 }

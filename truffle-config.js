@@ -24,6 +24,9 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
+require('dotenv').config();
+const HDWalletProvider = require('truffle-hdwallet-provider');
+
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -72,6 +75,19 @@ module.exports = {
     // network_id: 2111,   // This network is yours, in the cloud.
     // production: true    // Treats this network as if it was a public net. (default: false)
     // }
+    development: {
+      host: "127.0.0.1",
+      port: 7545,
+      network_id: "*" // Match any network id
+    },
+    ropsten: {
+        provider: function() {
+        return new HDWalletProvider(
+           process.env.MNEMONIC, 'https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}')
+       },
+       network_id: 3,
+       gas: 450000
+    }
   },
 
   // Set default mocha options here, use special reporters etc.
