@@ -26,6 +26,8 @@
 
 require('dotenv').config();
 const HDWalletProvider = require('truffle-hdwallet-provider');
+const infuraRopsten = 'https://ropsten.infura.io/v3/'.concat(process.env.INFURA_API_KEY);
+const infuraMainnet = 'https://mainnet.infura.io/v3/'.concat(process.env.INFURA_API_KEY);
 
 module.exports = {
   /**
@@ -83,11 +85,23 @@ module.exports = {
     ropsten: {
         provider: function() {
         return new HDWalletProvider(
-           process.env.MNEMONIC, 'https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}')
+           process.env.MNEMONIC, infuraRopsten )
        },
        network_id: 3,
-       gas: 450000
-    }
+       gas: 5000000,
+       gasPrice: 2000000000, 
+       networkCheckTimeout: 9999999
+    },
+    mainnet: {
+        provider: function() {
+        return new HDWalletProvider(
+           process.env.MNEMONIC, infuraMainnet ) 
+       },       
+       gas: 5000000,
+       gasPrice: 8000000000,
+       confirmations: 2,
+       network_id: 1
+    }     
   },
 
   // Set default mocha options here, use special reporters etc.
