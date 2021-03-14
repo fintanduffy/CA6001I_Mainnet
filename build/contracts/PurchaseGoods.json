@@ -55,15 +55,15 @@
       "constant": true
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.0+commit.26b70077\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"customers\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getCustomers\",\"outputs\":[{\"internalType\":\"address[16]\",\"name\":\"\",\"type\":\"address[16]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"goodId\",\"type\":\"uint256\"}],\"name\":\"purchase\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/fintan/CA6001I_Assignment1/contracts/PurchaseGoods.sol\":\"PurchaseGoods\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/fintan/CA6001I_Assignment1/contracts/PurchaseGoods.sol\":{\"keccak256\":\"0xd659aca89a29b6aa631e393b8ff8e2df55d1814423fa2f0f92607f37c1899fdb\",\"urls\":[\"bzz-raw://018b9530912e545b3ff36819578d13592590bb93dc08c356b8bcd5ec83c98700\",\"dweb:/ipfs/QmPAE4PqyT78L4RChwYEihRdWJ8uepEDiCP4K2GVDQfvpB\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506102d7806100206000396000f3fe608060405234801561001057600080fd5b506004361061005e576000357c010000000000000000000000000000000000000000000000000000000090048063c0abda2a14610063578063efef39a1146100d1578063f1ba712714610113575b600080fd5b61008f6004803603602081101561007957600080fd5b8101908080359060200190929190505050610159565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100fd600480360360208110156100e757600080fd5b810190808035906020019092919050505061018c565b6040518082815260200191505060405180910390f35b61011b6101fd565b6040518082601060200280838360005b8381101561014657808201518184015260208101905061012b565b5050505090500191505060405180910390f35b6000816010811061016657fe5b016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080821015801561019f5750600f8211155b6101a857600080fd5b33600083601081106101b657fe5b0160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550819050919050565b61020561027e565b6000601080602002604051908101604052809291908260108015610274576020028201915b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001906001019080831161022a575b5050505050905090565b60405180610200016040528060109060208202803883398082019150509050509056fea264697066735822122068eefa7820e5aacce1522bcca7b7c5722f0c1b4c674de82ef5a198fa9bca147064736f6c63430006000033",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061005e576000357c010000000000000000000000000000000000000000000000000000000090048063c0abda2a14610063578063efef39a1146100d1578063f1ba712714610113575b600080fd5b61008f6004803603602081101561007957600080fd5b8101908080359060200190929190505050610159565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100fd600480360360208110156100e757600080fd5b810190808035906020019092919050505061018c565b6040518082815260200191505060405180910390f35b61011b6101fd565b6040518082601060200280838360005b8381101561014657808201518184015260208101905061012b565b5050505090500191505060405180910390f35b6000816010811061016657fe5b016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080821015801561019f5750600f8211155b6101a857600080fd5b33600083601081106101b657fe5b0160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550819050919050565b61020561027e565b6000601080602002604051908101604052809291908260108015610274576020028201915b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001906001019080831161022a575b5050505050905090565b60405180610200016040528060109060208202803883398082019150509050509056fea264697066735822122068eefa7820e5aacce1522bcca7b7c5722f0c1b4c674de82ef5a198fa9bca147064736f6c63430006000033",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.0+commit.26b70077\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"customers\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getCustomers\",\"outputs\":[{\"internalType\":\"address[16]\",\"name\":\"\",\"type\":\"address[16]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"goodId\",\"type\":\"uint256\"}],\"name\":\"purchase\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/fintan/CA6001I_Mainnet/contracts/PurchaseGoods.sol\":\"PurchaseGoods\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/fintan/CA6001I_Mainnet/contracts/PurchaseGoods.sol\":{\"keccak256\":\"0xd659aca89a29b6aa631e393b8ff8e2df55d1814423fa2f0f92607f37c1899fdb\",\"urls\":[\"bzz-raw://018b9530912e545b3ff36819578d13592590bb93dc08c356b8bcd5ec83c98700\",\"dweb:/ipfs/QmPAE4PqyT78L4RChwYEihRdWJ8uepEDiCP4K2GVDQfvpB\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506102d7806100206000396000f3fe608060405234801561001057600080fd5b506004361061005e576000357c010000000000000000000000000000000000000000000000000000000090048063c0abda2a14610063578063efef39a1146100d1578063f1ba712714610113575b600080fd5b61008f6004803603602081101561007957600080fd5b8101908080359060200190929190505050610159565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100fd600480360360208110156100e757600080fd5b810190808035906020019092919050505061018c565b6040518082815260200191505060405180910390f35b61011b6101fd565b6040518082601060200280838360005b8381101561014657808201518184015260208101905061012b565b5050505090500191505060405180910390f35b6000816010811061016657fe5b016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080821015801561019f5750600f8211155b6101a857600080fd5b33600083601081106101b657fe5b0160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550819050919050565b61020561027e565b6000601080602002604051908101604052809291908260108015610274576020028201915b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001906001019080831161022a575b5050505050905090565b60405180610200016040528060109060208202803883398082019150509050509056fea264697066735822122034405fe7bcc83fdd84b9c3835c97724fb8f3226e8bb369cee4e8a4207bac37d664736f6c63430006000033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061005e576000357c010000000000000000000000000000000000000000000000000000000090048063c0abda2a14610063578063efef39a1146100d1578063f1ba712714610113575b600080fd5b61008f6004803603602081101561007957600080fd5b8101908080359060200190929190505050610159565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100fd600480360360208110156100e757600080fd5b810190808035906020019092919050505061018c565b6040518082815260200191505060405180910390f35b61011b6101fd565b6040518082601060200280838360005b8381101561014657808201518184015260208101905061012b565b5050505090500191505060405180910390f35b6000816010811061016657fe5b016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080821015801561019f5750600f8211155b6101a857600080fd5b33600083601081106101b657fe5b0160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550819050919050565b61020561027e565b6000601080602002604051908101604052809291908260108015610274576020028201915b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001906001019080831161022a575b5050505050905090565b60405180610200016040528060109060208202803883398082019150509050509056fea264697066735822122034405fe7bcc83fdd84b9c3835c97724fb8f3226e8bb369cee4e8a4207bac37d664736f6c63430006000033",
   "sourceMap": "77:559:0:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;77:559:0;;;;;;;",
   "deployedSourceMap": "77:559:0:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;77:559:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;224:28;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;224:28:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;318:190;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;318:190:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;542:92;;;:::i;:::-;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;542:92:0;;;;;;;;;;;;;;;;224:28;;;;;;;;;;;;;;;;;;;;;;;:::o;318:190::-;365:4;428:1;418:6;:11;;:27;;;;;443:2;433:6;:12;;418:27;410:36;;;;;;473:10;453:9;463:6;453:17;;;;;;;;;:30;;;;;;;;;;;;;;;;;;497:6;490:13;;318:190;;;:::o;542:92::-;587:18;;:::i;:::-;620:9;613:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;542:92;:::o;77:559::-;;;;;;;;;;;29:2:-1;21:6;17:15;117:4;105:10;97:6;88:34;148:4;140:6;136:17;126:27;;0:157;77:559:0;;;;:::o",
   "source": "pragma solidity ^0.6.0;\n\n//  Contract to allow customers to purchahse goods\n\ncontract PurchaseGoods {\n  \n  // As there are 16 goods in the sample set we are \n  // creating an array of addresses for 16 potential customers\n\n  address[16] public customers;\n\n  // Function to assign an customer address for a given good\n  function purchase(uint goodId) public returns (uint) {\n    // Ensure we have a valid id\n    require(goodId >= 0 && goodId <= 15);\n\n    customers[goodId] = msg.sender;\n\n    return goodId;\n  }\n\n  // Retrieving the customers\n  function getCustomers() public view returns (address[16] memory) {\n    return customers;\n  }\n}\n",
-  "sourcePath": "/home/fintan/CA6001I_Assignment1/contracts/PurchaseGoods.sol",
+  "sourcePath": "/home/fintan/CA6001I_Mainnet/contracts/PurchaseGoods.sol",
   "ast": {
-    "absolutePath": "/home/fintan/CA6001I_Assignment1/contracts/PurchaseGoods.sol",
+    "absolutePath": "/home/fintan/CA6001I_Mainnet/contracts/PurchaseGoods.sol",
     "exportedSymbols": {
       "PurchaseGoods": [
         43
@@ -294,10 +294,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        998,
-                        999
+                        61,
+                        62
                       ],
-                      "referencedDeclaration": 998,
+                      "referencedDeclaration": 61,
                       "src": "410:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -381,7 +381,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 995,
+                        "referencedDeclaration": 58,
                         "src": "473:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -635,7 +635,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/home/fintan/CA6001I_Assignment1/contracts/PurchaseGoods.sol",
+      "absolutePath": "/home/fintan/CA6001I_Mainnet/contracts/PurchaseGoods.sol",
       "exportedSymbols": {
         "PurchaseGoods": [
           43
@@ -846,10 +846,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                998,
-                                999
+                                61,
+                                62
                               ],
-                              "referencedDeclaration": 998,
+                              "referencedDeclaration": 61,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1063,7 +1063,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 995,
+                                  "referencedDeclaration": 58,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -1262,21 +1262,15 @@
     "version": "0.6.0+commit.26b70077.Emscripten.clang"
   },
   "networks": {
-    "3": {
-      "events": {},
-      "links": {},
-      "address": "0xeA7d5B4898Aa00E1256E9EF0878a9a6852bc7370",
-      "transactionHash": "0xc3fbc2b3a0ab6726e87010718440a6951763e6b4607030606b69cfabc6dfa957"
-    },
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x385d08b4DcF6F76a9E003BbB7fc3b2488bB4e16B",
-      "transactionHash": "0x5f52bae3d81db875729a66c5d4b6cc95a581d8078009ef160f9f246c1cc91100"
+      "address": "0xCE731490aC5E3091475ECe5e5F8d79EFD95a14ae",
+      "transactionHash": "0xf0edac474832e42bf199f9954289a5a9f1ad6040d8a06d4d97daefc058298e62"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-03-13T19:59:32.703Z",
+  "updatedAt": "2021-03-14T20:31:10.701Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

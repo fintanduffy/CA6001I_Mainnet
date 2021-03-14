@@ -84,7 +84,7 @@ App = {
 
   //  Bind the UI controls to the JS functions
   bindEvents: function() {
-    $(document).on('click', '.btn-purchase', App.handlePurchase);
+    $(document).on('click', '.btn-purchase', App.handlePurchaseEvent);
     $(document).on('click', '.btn-donate', App.handleDonation);
   },
   
@@ -109,13 +109,48 @@ App = {
     });
   },
 
-  // Function to record goods as purchased
-  handlePurchase: function(event) {
+  handlePurchaseEvent: function(event) {
     event.preventDefault();
     
     var goodId = parseInt($(event.target).data('id'));
     var goodPrice = 0;
 
+    var purchaseGoodsInstance;
+
+      //  Ensure we can access the accounts 
+      web3.eth.getAccounts(function(error, accounts) {
+        if (error) {
+          console.log(error);
+        }
+
+        var account = accounts[0];
+
+        console.log('Purchase account = ' + account);
+
+        // Get an instance of the deployed contract
+        App.contracts.PurchaseGoods.deployed().then(function(instance) {
+          purchaseGoodsInstance = instance;
+
+          //  Execute purchase of goods to the customer
+          return purchaseGoodsInstance.purchase(goodId, {from: account});
+        }).then(function(result) {
+          //  Update UI to indicate the goods have been purchased
+          return App.markPurchased();
+        }).catch(function(err) {
+          alert('Purchase Failed! : ' + err.message);
+          console.log(err.message);
+        });
+        
+    });
+
+  },    
+
+  // Function to record goods as purchased
+  handlePurchase: function(event) {
+    event.preventDefault();
+    
+    var goodId = parseInt($(event.target).data('id'));
+    var goodPrice = 0;    
      
     //  Retrieve the price of goods based on the id
     $.getJSON('../goods.json', function(data) {

@@ -97,8 +97,8 @@ module.exports = {
         return new HDWalletProvider(
            process.env.MNEMONIC, infuraMainnet ) 
        },       
-       gas: 5000000,
-       gasPrice: 8000000000,
+       gas: 223000,
+       gasPrice: 181000000000,
        confirmations: 2,
        network_id: 1
     }     
